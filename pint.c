@@ -18,8 +18,6 @@ void pint_func(stack_t **head, unsigned int line_number)
 	if (h == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
-		fclose(ext.file);
-		free(ext.content);
 		exit_free();
 	}
 	printf("%d\n", h->n);
