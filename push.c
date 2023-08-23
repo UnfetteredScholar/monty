@@ -20,7 +20,12 @@ void push(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit_free();
 	}
-
+	if (ext.arg2 == NULL)
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		free(new);
+		exit_free();
+	}
 	while (ext.arg2[i] != '\0')
 	{
 		if (!(ext.arg2[i] >= '0' && ext.arg2[i] <= '9'))

@@ -7,10 +7,10 @@ push 2
 
 
                            
-push 32gd
-pen
+push 32
+nop
     push 5    
-      push    6       
+      push           
       pall
     pop
     pop
