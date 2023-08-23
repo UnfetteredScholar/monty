@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -31,12 +32,14 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-<<<<<<< HEAD
 /**
  * struct ext_s - contains variables: args, file, content
  * of line
  * @file: Pointer to .m file
  * @content: Content of the line
+ * @line_number: stores the current line number
+ * @arg1: stores argument 1
+ * @arg2: stores argument 2 if applicable else NULL
  *
  * Description: Helps store values throughout the project
  */
@@ -44,14 +47,29 @@ typedef struct ext_s
 {
 	FILE *file;
 	char *content;
+	int line_number;
+	char *arg1;
+	char *arg2;
+	stack_t *h;
 } ext_t;
+
 extern ext_t ext;
 
-=======
+void get_args(char *s, const char *t);
+
+instruction_t get_function(char *op);
+
+void free_stack(stack_t *head);
+
+void free_heap(void);
+
+void exit_free(void);
+
 void push(stack_t **stack, unsigned int line_number);
 
 void pall_print(stack_t **stack, unsigned int line_number);
 
 void pop(stack_t **stack, unsigned int line_number);
->>>>>>> d76630b1572ec30b95d8f580dca50a3871cbc2d1
+
+void pint_func(stack_t **head, unsigned int line_number);
 #endif /* MONTY_H */

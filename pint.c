@@ -1,5 +1,6 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * pint_func - Function that prints the value at the top
  * of the stack followed by a new line
@@ -19,8 +20,7 @@ void pint_func(stack_t **head, unsigned int line_number)
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		fclose(ext.file);
 		free(ext.content);
-		free_stack(h);
-		exit(EXIT_FAILURE);
+		exit_free();
 	}
-	prints("%d\n", h->n);
+	printf("%d\n", h->n);
 }
