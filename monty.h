@@ -31,4 +31,19 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct ext_s - contains variables: args, file, content
+ * of line
+ * @file: Pointer to .m file
+ * @content: Content of the line
+ *
+ * Description: Helps store values throughout the project
+ */
+typedef struct ext_s
+{
+	FILE *file;
+	char *content;
+} ext_t;
+extern ext_t ext;
+
 #endif /* MONTY_H */
