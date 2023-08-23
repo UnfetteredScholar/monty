@@ -29,6 +29,10 @@ instruction_t get_function(char *op)
 	{
 		inst.f = pop;
 	}
+	else if (strcmp(op, "nop") == 0)
+	{
+		inst.f = nop;
+	}
 	else
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n",

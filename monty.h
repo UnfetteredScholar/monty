@@ -65,6 +65,8 @@ void free_heap(void);
 
 void exit_free(void);
 
+void nop(stack_t **stack, unsigned int line_number);
+
 void push(stack_t **stack, unsigned int line_number);
 
 void pall_print(stack_t **stack, unsigned int line_number);
