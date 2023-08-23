@@ -31,6 +31,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+<<<<<<< HEAD
 /**
  * struct ext_s - contains variables: args, file, content
  * of line
@@ -46,4 +47,11 @@ typedef struct ext_s
 } ext_t;
 extern ext_t ext;
 
+=======
+void push(stack_t **stack, unsigned int line_number);
+
+void pall_print(stack_t **stack, unsigned int line_number);
+
+void pop(stack_t **stack, unsigned int line_number);
+>>>>>>> d76630b1572ec30b95d8f580dca50a3871cbc2d1
 #endif /* MONTY_H */
