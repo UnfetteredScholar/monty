@@ -3,7 +3,7 @@
 #include "monty.h"
 
 /**
- * add - divides the second top element of
+ * div_op - divides the second top element of
  * the stack by the top element of the stack
  * @stack: pointer to the address
  * @line_number: the line number
