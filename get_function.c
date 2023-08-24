@@ -33,6 +33,10 @@ instruction_t get_function(char *op)
 	{
 		inst.f = nop;
 	}
+	else if (strcmp(op, "swap") == 0)
+	{
+		inst.f = swap;
+	}
 	else
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n",
