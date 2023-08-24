@@ -21,7 +21,7 @@ instruction_t get_function(char *op)
 		inst.f = pint_func;
 	else if (strcmp(op, "pop") == 0)
 		inst.f = pop;
-	else if (strcmp(op, "nop") == 0)
+	else if ((strcmp(op, "nop") == 0) || (op[0] == '#'))
 		inst.f = nop;
 	else if (strcmp(op, "swap") == 0)
 		inst.f = swap;
