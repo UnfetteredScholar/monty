@@ -39,6 +39,8 @@ instruction_t get_function(char *op)
 		inst.f = pchar;
 	else if (strcmp(op, "pstr") == 0)
 		inst.f = pstr;
+	else if (strcmp(op, "rotl") == 0)
+		inst.f = rotl;
 	else
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n",
