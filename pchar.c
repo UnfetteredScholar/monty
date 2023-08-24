@@ -14,12 +14,12 @@ void pchar(stack_t **stack, unsigned int line_number)
 {
 	stack_t *h;
 
-	h = *stack;
-	if (stack == NULL || h == NULL)
+	if (stack == NULL || *stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
 		exit_free();
 	}
+	h = *stack;
 	if (!(h->n >= 0 && h->n <= 127))
 	{
 		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
