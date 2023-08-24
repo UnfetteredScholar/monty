@@ -3,7 +3,8 @@
 #include "monty.h"
 
 /**
- * sub - subtracts the top element of the stack from the second top element of the stack
+ * sub - subtracts the top element of the stack
+ * from the second top element of the stack
  * @stack: pointer to the address
  * @line_number: the line number
  *

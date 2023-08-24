@@ -1,12 +1,5 @@
-push 1
-push 2
-push 3
+push 8
+push 4
 pall
-add
-pall
-push 1
-push 2
-push 10
-push 3
-sub
+div
 pall

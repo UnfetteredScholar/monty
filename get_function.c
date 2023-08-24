@@ -29,6 +29,8 @@ instruction_t get_function(char *op)
 		inst.f = add;
 	else if (strcmp(op, "sub") == 0)
 		inst.f = sub;
+	else if (strcmp(op, "div") == 0)
+		inst.f = div_op;
 	else
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n",
