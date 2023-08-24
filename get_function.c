@@ -33,6 +33,8 @@ instruction_t get_function(char *op)
 		inst.f = div_op;
 	else if (strcmp(op, "mul") == 0)
 		inst.f = mul_op;
+	else if (strcmp(op, "mod") == 0)
+		inst.f = mod;
 	else
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n",
